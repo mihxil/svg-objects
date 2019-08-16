@@ -14,4 +14,4 @@ This version has the following parameters:
   <c:set var="dur" value="${empty param.dur ? '1500ms' : param.dur}" />
 ```
 And the default then renders like so:
-![Default Rendering](spinner.svg?raw=true "default rendering")
+<img src="./spinner.svg">
