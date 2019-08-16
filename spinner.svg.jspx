@@ -1,0 +1,39 @@
+<?xml version="1.0" standalone="yes"?>
+<jsp:root
+  xmlns:jsp="http://java.sun.com/JSP/Page"
+  version="2.0"
+  xmlns:c="http://java.sun.com/jsp/jstl/core" >
+  <jsp:directive.page contentType="image/svg+xml" />
+  <jsp:scriptlet>
+      response.setHeader("Cache-Control", "max-age=3600");
+  </jsp:scriptlet>
+  <c:set var="size" value="${empty param.size ? 64 : param.size}" />
+  <c:set var="color" value="${empty param.color ? '#ed6d1c' : param.color}" />
+  <c:set var="circles" value="${empty param.circles ? 7 : param.circles}" />
+  <c:set var="steps" value="${empty param.steps ? 50 : param.steps}" />
+  <c:set var="dur" value="${empty param.dur ? '1500ms' : param.dur}" />
+
+  <svg xmlns="http://www.w3.org/2000/svg"
+       width="${size}px" height="${size}px"
+       viewBox="0 0 ${size * 2} ${size *2}"
+       xml:space="preserve">
+    <g>
+      <c:forEach begin="0" end="${circles}" var="i">
+        <circle cx="${size / 4}" cy="${size}" r="${(i / circles) * size / 4}" fill="${color}" fill-opacity="1" transform="rotate(${i * (360 / circles)} ${size} ${size})"/>
+      </c:forEach>
+      <c:set var="transforms">
+        <c:forEach begin="0" end="${steps - 1}" var="i">
+          <jsp:text>${i  * 360 / steps} ${size} ${size};</jsp:text>
+        </c:forEach>
+      </c:set>
+      <animateTransform
+        attributeName="transform"
+        type="rotate"
+        values="${transforms}"
+        calcMode="discrete"
+        dur="${dur}"
+        repeatCount="indefinite">
+      </animateTransform>
+    </g>
+  </svg>
+</jsp:root>
