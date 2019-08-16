@@ -8,10 +8,19 @@
       response.setHeader("Cache-Control", "max-age=3600");
   </jsp:scriptlet>
   <c:set var="size" value="${empty param.size ? 64 : param.size}" />
+  <!-- the square size of the spinner -->
+
   <c:set var="color" value="${empty param.color ? '#ed6d1c' : param.color}" />
+  <!-- the fill color of the circles making up the spinner -->
+
   <c:set var="circles" value="${empty param.circles ? 7 : param.circles}" />
+  <!-- The number of circles the spinner should be made up off -->
+
   <c:set var="steps" value="${empty param.steps ? 50 : param.steps}" />
+  <!-- The number of steps used in one cycle of the animation -->
+
   <c:set var="dur" value="${empty param.dur ? '1500ms' : param.dur}" />
+  <!-- The duration of one cycle of the animation -->
 
   <svg xmlns="http://www.w3.org/2000/svg"
        width="${size}px" height="${size}px"
