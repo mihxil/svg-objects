@@ -1,4 +1,11 @@
-# svg-spinner
+[![Maven Central](https://img.shields.io/maven-central/v/org.meeuw/svg-objects.svg?label=Maven%20Central)](https://search.maven.org/search?q=g:%22org.meeuw%22%20AND%20a:%22svg-objects%22)
+[![Build Status](https://travis-ci.org/mihxil/svg-objects.svg?)](https://travis-ci.org/mihxil/svg-objects)
+[![snapshots](https://img.shields.io/nexus/s/https/oss.sonatype.org/org.meeuw/svg-objects.svg)](https://oss.sonatype.org/content/repositories/staging/org/meeuw/svg-object/)
+# svg-objects
+
+# spinner
+
+Use:  `/meeuw/spinner?<params>`
 A parameterized SVG spinner in JSPX
 
 If you have a servlet environment, than you can simply generate an SVG spinner using JSP. E.g. like this.
