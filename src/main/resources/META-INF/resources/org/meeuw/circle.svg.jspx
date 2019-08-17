@@ -1,0 +1,18 @@
+<?xml version="1.0" standalone="yes"?>
+<jsp:root
+  xmlns:jsp="http://java.sun.com/JSP/Page"
+  version="2.0"
+  xmlns:c="http://java.sun.com/jsp/jstl/core" >
+  <jsp:output omit-xml-declaration="false" />
+  <jsp:directive.page contentType="image/svg+xml" />
+  <jsp:scriptlet>
+      response.setHeader("Cache-Control", "max-age=3600");
+  </jsp:scriptlet>
+  <c:set var="size" value="${empty param.size ? 16 : param.size}" />
+
+  <c:set var="color" value="${empty param.color ? '#000' : param.color}" />
+
+  <svg viewBox="0 0 ${size} ${size}" version="1.1"  xmlns="http://www.w3.org/2000/svg">
+    <circle cx="${size / 2}" cy="${size / 2}" r="${size / 2}" fill="${color}" />
+  </svg>
+</jsp:root>

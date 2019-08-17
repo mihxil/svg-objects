@@ -1,0 +1,26 @@
+<web-fragment
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xmlns="http://java.sun.com/xml/ns/javaee"
+              xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-fragment_3_0.xsd"
+              id="svg-servlets" version="3.0">
+
+  <name>svgobjects</name>
+
+  <servlet>
+    <servlet-name>svg-spinner</servlet-name>
+    <jsp-file>/org/meeuw/spinner.svg.jspx</jsp-file>
+  </servlet>
+  <servlet>
+    <servlet-name>svg-circle</servlet-name>
+    <jsp-file>/org/meeuw/circle.svg.jspx</jsp-file>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>svg-spinner</servlet-name>
+    <url-pattern>/meeuw/spinner</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>svg-circle</servlet-name>
+    <url-pattern>/meeuw/circle</url-pattern>
+  </servlet-mapping>
+
+</web-fragment>
