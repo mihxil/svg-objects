@@ -3,11 +3,11 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>org.meeuw</groupId>
-  <artifactId>svg-spinner</artifactId>
-  <name>mihxil-svg-spinner</name>
+  <artifactId>svg-objects</artifactId>
+  <name>svg-objects</name>
   <version>0.1-SNAPSHOT</version>
-  <description>Just a spinner in svg</description>
-  <url>https://github.com/mihxil/svg-spinner</url>
+  <description>Just </description>
+  <url>https://github.com/mihxil/svg-objects</url>
 
 
   <licenses>
