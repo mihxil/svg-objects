@@ -6,16 +6,14 @@
   <artifactId>svg-objects</artifactId>
   <name>svg-objects</name>
   <version>0.1-SNAPSHOT</version>
-  <description>Just </description>
+  <description>Provides a few (JSP) servlet that produce simple parameterized SVG images. If you quickly need an image of a blue circle or something like that, simply take a dependency on this jar.</description>
   <url>https://github.com/mihxil/svg-objects</url>
 
 
   <licenses>
     <license>
-      <name>Apache License, Version 2.0</name>
-      <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
-      <distribution>repo</distribution>
-      <comments>A business-friendly OSS license</comments>
+      <name>GPLv3</name>
+      <url>http://www.gnu.org/licenses/gpl-3.0.txt</url>
     </license>
   </licenses>
 
