@@ -14,6 +14,10 @@
     <servlet-name>svg-circle</servlet-name>
     <jsp-file>/org/meeuw/circle.svg.jspx</jsp-file>
   </servlet>
+  <servlet>
+    <servlet-name>svg-polygon</servlet-name>
+    <jsp-file>/org/meeuw/polygon.svg.jspx</jsp-file>
+  </servlet>
   <servlet-mapping>
     <servlet-name>svg-spinner</servlet-name>
     <url-pattern>/meeuw/spinner</url-pattern>
@@ -21,6 +25,10 @@
   <servlet-mapping>
     <servlet-name>svg-circle</servlet-name>
     <url-pattern>/meeuw/circle</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>svg-polygon</servlet-name>
+    <url-pattern>/meeuw/polygon</url-pattern>
   </servlet-mapping>
 
 </web-fragment>

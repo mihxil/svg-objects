@@ -12,8 +12,6 @@
   <c:set var="size" value="${empty param.size ? 64 : param.size}" />
   <!-- the square size of the spinner -->
 
-
-
   <c:set var="color" value="${empty param.color ? '#000' : param.color}" />
   <!-- the fill color of the circles making up the spinner -->
 
