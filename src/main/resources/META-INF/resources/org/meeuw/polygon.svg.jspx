@@ -3,16 +3,32 @@
   xmlns:jsp="http://java.sun.com/JSP/Page"
   version="2.0"
   xmlns:c="http://java.sun.com/jsp/jstl/core" >
+  <jsp:directive.page import="static java.lang.Math.*"/>
   <jsp:output omit-xml-declaration="false" />
   <jsp:directive.page contentType="image/svg+xml" />
   <jsp:scriptlet>
       response.setHeader("Cache-Control", "max-age=3600");
   </jsp:scriptlet>
-  <c:set var="size" value="${empty param.size ? 16 : param.size}" />
+  <c:set var="size" value="${empty param.size ? '16' : param.size}" />
   <c:set var="color" value="${empty param.color ? '#000' : param.color}" />
-  <c:set var="sides" value="${empty param.sides ? 3 : param.sides}" />
-  <jsp:scriptlet>Math.PI, Math.sin()</jsp:scriptlet>
-  <svg viewBox="0 0 ${size} ${size}" version="1.1"  xmlns="http://www.w3.org/2000/svg">
-    <circle cx="${size / 2}" cy="${size / 2}" r="${size / 2}" fill="${color}" />
-  </svg>
+  <c:set var="sides" value="${empty param.sides ? '3' : param.sides}" />
+  <c:set var="points">
+    <jsp:scriptlet>
+      long sides = Long.parseLong((String) pageContext.getAttribute("sides"));
+      double size = Double.parseDouble((String) pageContext.getAttribute("size"));
+      for (int i = 0 ; i &lt; sides; i++) {
+        double phi = PI * 2 * (i + 0.5d) / sides;
+        out.print(size * (1d + sin(phi)) / 4);
+        out.print(',');
+        out.print(size * (1d + cos(phi)) / 4);
+        out.print(' ');
+      }
+    </jsp:scriptlet>
+  </c:set>
+  <svg xmlns="http://www.w3.org/2000/svg"
+       width="${size}px" height="${size}px"
+       viewBox="0 0 ${size} ${size}"
+  >
+  <polygon points="${points}" fill="${color}" />
+</svg>
 </jsp:root>
