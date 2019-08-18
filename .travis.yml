@@ -2,7 +2,7 @@ language: java
 jdk:
 - openjdk8
 sudo: false
-script: mvn clean deploy
+script: mvn -Pdeploy clean deploy
 env:
   global:
   - SONATYPE_USERNAME=mihxil

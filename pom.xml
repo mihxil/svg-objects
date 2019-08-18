@@ -37,9 +37,9 @@
   <packaging>jar</packaging>
 
   <scm>
-    <connection>scm:git:git://github.com/mihxil/svg-spinner.git</connection>
-    <developerConnection>scm:git:ssh://git@github.com/mihxil/svg-spinner.git</developerConnection>
-    <url>https://github.com/mihxil/svg-spinner</url>
+    <connection>scm:git:git://github.com/mihxil/svg-objects.git</connection>
+    <developerConnection>scm:git:ssh://git@github.com/mihxil/svg-objects.git</developerConnection>
+    <url>https://github.com/mihxil/svg-objects</url>
     <tag>HEAD</tag>
   </scm>
 
@@ -54,10 +54,8 @@
     </repository>
   </distributionManagement>
 
-
   <build>
     <defaultGoal>install</defaultGoal>
-
   </build>
 
   <profiles>
