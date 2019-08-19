@@ -3,7 +3,7 @@
 [![snapshots](https://img.shields.io/nexus/s/https/oss.sonatype.org/org.meeuw/svg-objects.svg)](https://oss.sonatype.org/content/repositories/staging/org/meeuw/svg-objects/)
 # svg-objects
 
-Provides some simple parameterized SVG objects was web-fragments. Implemented in JSP(X)
+Provides some simple parameterized SVG objects as web-fragments. Implemented in JSP(X)
 
 This can be used in serlvet environment.
 
