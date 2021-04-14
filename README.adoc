@@ -1,7 +1,9 @@
 = svg-objects
 :toc:
+
+
 image:https://img.shields.io/maven-central/v/org.meeuw/svg-objects.svg?label=Maven%20Central[Maven Central,link=https://search.maven.org/search?q=g:%22org.meeuw%22%20AND%20a:%22svg-objects%22]
-image:https://travis-ci.org/mihxil/svg-objects.svg?[Build Status,link=https://travis-ci.org/mihxil/svg-objects]
+image:https://github.com/mihxil/svg-objects/workflows/build/badge.svg?[Build Status,link=https://github.com/mihxil/svg-objects/actions?query=workflow%3Abuild]
 image:https://img.shields.io/nexus/s/https/oss.sonatype.org/org.meeuw/svg-objects.svg[snapshots,link=https://oss.sonatype.org/content/repositories/staging/org/meeuw/svg-objects/]
 
 
