@@ -26,9 +26,17 @@ The name of the web-fragment is 'svgobjects', which you may want to include in `
 
 == spinner
 
-Use: `${pageContext.request.contextPath}/meeuw/spinner?&lt;params&gt;`
-
 A parameterized SVG spinner in JSPX
+
+
+Use:
+[source,jsp]
+
+.usage in an jsp
+----
+<img src="${pageContext.request.contextPath}/meeuw/spinner?size=10"
+  height="10" width="10" />
+----
 
 If you have a servlet environment, than you can simply generate an SVG spinner using JSP. E.g. like this.
 
@@ -55,7 +63,7 @@ This version has the following parameters:
 ----
 
 And the default then renders like so:
-image:./spinner.svg
+image:spinner.svg[]
 
 == circle
 
