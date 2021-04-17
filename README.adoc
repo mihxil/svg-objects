@@ -55,7 +55,7 @@ This version has the following parameters:
 ----
 
 And the default then renders like so:
-<img src="./spinner.svg">
+image:./spinner.svg
 
 == circle
 
