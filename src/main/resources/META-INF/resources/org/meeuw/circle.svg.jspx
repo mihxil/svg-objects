@@ -2,7 +2,7 @@
 <jsp:root
   xmlns:jsp="http://java.sun.com/JSP/Page"
   version="2.0"
-  xmlns:c="http://java.sun.com/jsp/jstl/core" >
+  xmlns:c="jakarta.tags.core" >
   <jsp:output omit-xml-declaration="false" />
   <jsp:directive.page contentType="image/svg+xml" />
   <jsp:scriptlet>
