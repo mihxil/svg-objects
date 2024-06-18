@@ -5,7 +5,7 @@
   <groupId>org.meeuw</groupId>
   <artifactId>svg-objects</artifactId>
   <name>svg-objects</name>
-  <version>0.3-SNAPSHOT</version>
+  <version>0.3</version>
   <description>Provides a few (JSP) servlet that produce simple parameterized SVG images. If you quickly need an image of a blue circle or something like that, simply take a dependency on this jar.</description>
   <url>https://github.com/mihxil/svg-objects</url>
 
@@ -44,7 +44,7 @@
     <connection>scm:git:git://github.com/mihxil/svg-objects.git</connection>
     <developerConnection>scm:git:ssh://git@github.com/mihxil/svg-objects.git</developerConnection>
     <url>https://github.com/mihxil/svg-objects</url>
-    <tag>HEAD</tag>
+    <tag>svg-objects-0.3</tag>
   </scm>
 
   <distributionManagement>
