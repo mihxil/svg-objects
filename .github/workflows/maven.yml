@@ -1,6 +1,5 @@
 name: build
 
-
 on:
   push:
     branches: [ main ]
@@ -21,6 +20,12 @@ jobs:
       with:
         java-version: 11
         distribution: temurin
+        server-id: ossrh
+        server-username: SONATYPE_USERNAME
+        server-password: SONATYPE_PASSWORD
     - name: Deploy with Maven
-      run: OSSRH_PASSWORD=${{ secrets.OSSRH_PASSWORD }} mvn -B -Ddeploy  -DskipTests=true -s $GITHUB_WORKSPACE/.github/settings.xml -Dgpg.skip=true deploy
+      run:  mvn -B -Ddeploy  -DskipTests=true -Dgpg.skip=true deploy
       if: ${{ github.event_name == 'push' }}
+      env:
+        SONATYPE_USERNAME: ${{ secrets.OSSRH_USERNAME }}
+        SONATYPE_PASSWORD: ${{ secrets.OSSRH_PASSWORD }}
