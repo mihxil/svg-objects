@@ -15,11 +15,11 @@ Take a dependency like so:
 
 [source,xml]
 ----
- <dependency>
-   <groupId>org.meeuw</groupId>
-   <artifactId>svg-objects</artifactId>
-   <version>0.1</version>
- </dependency>
+<dependency>
+  <groupId>org.meeuw</groupId>
+  <artifactId>svg-objects</artifactId>
+  <version>0.3</version>
+</dependency>
 ----
 
 The name of the web-fragment is 'svgobjects', which you may want to include in `web.xml/absolute-ordering`
