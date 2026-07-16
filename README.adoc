@@ -93,7 +93,7 @@ And the default then renders like so:
 image:spinner.svg[]
 
 
-=== `/meeuw/polygon`
+== `/meeuw/polygon`
 
 Use: `${pageContext.request.contextPath}/meeuw/polygon?&lt;params&gt;`
 
