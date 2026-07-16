@@ -27,7 +27,6 @@ jobs:
         cache: maven
     - name: Deploy with Maven
       run:  mvn -B -Pdeploy  -DskipTests=true -Dgpg.skip=true deploy
-      if: ${{ github.event_name == 'push' }}
       env:
         CENTRAL_USERNAME: ${{ secrets.CENTRAL_USERNAME }}
         CENTRAL_PASSWORD: ${{ secrets.CENTRAL_PASSWORD }}
