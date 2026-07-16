@@ -72,3 +72,18 @@ Use: `${pageContext.request.contextPath}/meeuw/circle?&lt;params&gt;`
 == polygon
 
 Use: `${pageContext.request.contextPath}/meeuw/polygon?&lt;params&gt;`
+
+
+
+== jstl
+
+If you use the spinner it currently requires JSTL too
+[source, xml]
+----
+<dependency>
+  <groupId>org.glassfish.web</groupId>
+  <artifactId>jakarta.servlet.jsp.jstl</artifactId>
+  <version>3.0.1</version>
+</dependency>
+----
+The dependency is not transitive, you may not need it at all (if not using spinner), or you may want javax version (javax.servlet.jsp.jstl) if you are on an older servlet container.
