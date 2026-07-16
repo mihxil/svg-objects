@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     xmlns:th="http://www.thymeleaf.org"
+     th:attr="width=${size + 'px'},height=${size + 'px'},viewBox=${'0 0 ' + size * 2 + ' ' + size * 2}"
+     xml:space="preserve">
+    <g>
+        <circle th:each="i : ${#numbers.sequence(0, circles)}"
+                th:attr="cx=${size / 4},cy=${size},r=${(i / circles) * size / 4},fill=${color},fill-opacity='1',transform=${'rotate(' + (i * (360 / circles)) + ' ' + size + ' ' + size + ')'}" />
+        <animateTransform
+            attributeName="transform"
+            type="rotate"
+            th:attr="values=${transforms},dur=${dur}"
+            calcMode="discrete"
+            repeatCount="indefinite">
+        </animateTransform>
+    </g>
+</svg>
