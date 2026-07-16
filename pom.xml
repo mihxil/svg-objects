@@ -10,6 +10,10 @@
   <description>Parent POM for the svg-objects modules, which provide simple parameterized SVG images.</description>
   <url>https://github.com/mihxil/svg-objects</url>
 
+  <properties>
+    <maven.compiler.release>17</maven.compiler.release>
+  </properties>
+
   <licenses>
     <license>
       <name>GPLv3</name>
