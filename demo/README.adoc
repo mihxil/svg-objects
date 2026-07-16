@@ -1,0 +1,22 @@
+= demo
+
+A minimal Spring Boot app for manually exercising `svg-objects-spring-boot`. Not part of the
+`svg-objects` reactor and not published anywhere -- build and run it directly:
+
+[source,bash]
+----
+cd demo
+mvn -q spring-boot:run
+----
+
+Then, e.g.:
+
+[source,bash]
+----
+curl "http://localhost:8080/meeuw/circle?size=32&color=%23f00"
+curl "http://localhost:8080/meeuw/polygon?size=20&sides=5&color=%2300f"
+curl "http://localhost:8080/meeuw/spinner"
+----
+
+Requires `svg-objects-spring-boot` to already be installed in your local `~/.m2` repository
+(run `mvn install` from the repo root first).

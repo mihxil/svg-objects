@@ -3,12 +3,12 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>org.meeuw</groupId>
-  <artifactId>svg-objects</artifactId>
-  <name>svg-objects</name>
+  <artifactId>svg-objects-parent</artifactId>
   <version>0.4-SNAPSHOT</version>
-  <description>Provides a few (JSP) servlet that produce simple parameterized SVG images. If you quickly need an image of a blue circle or something like that, simply take a dependency on this jar.</description>
+  <packaging>pom</packaging>
+  <name>svg-objects-parent</name>
+  <description>Parent POM for the svg-objects modules, which provide simple parameterized SVG images.</description>
   <url>https://github.com/mihxil/svg-objects</url>
-
 
   <licenses>
     <license>
@@ -31,14 +31,10 @@
     </developer>
   </developers>
 
-  <dependencies>
-    <dependency>
-      <groupId>jakarta.servlet.jsp.jstl</groupId>
-      <artifactId>jakarta.servlet.jsp.jstl-api</artifactId>
-      <version>3.0.0</version>
-    </dependency>
-  </dependencies>
-  <packaging>jar</packaging>
+  <modules>
+    <module>svg-objects</module>
+    <module>svg-objects-spring-boot</module>
+  </modules>
 
   <scm>
     <connection>scm:git:git://github.com/mihxil/svg-objects.git</connection>
@@ -46,8 +42,6 @@
     <url>https://github.com/mihxil/svg-objects</url>
     <tag>HEAD</tag>
   </scm>
-
-
 
   <build>
     <defaultGoal>install</defaultGoal>
@@ -88,7 +82,5 @@
       </build>
     </profile>
   </profiles>
-
-
 
 </project>

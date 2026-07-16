@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>org.meeuw</groupId>
+    <artifactId>svg-objects-parent</artifactId>
+    <version>0.4-SNAPSHOT</version>
+  </parent>
+
+  <artifactId>svg-objects</artifactId>
+  <packaging>jar</packaging>
+  <name>svg-objects</name>
+  <description>Provides a few (JSP) servlet that produce simple parameterized SVG images. If you quickly need an image of a blue circle or something like that, simply take a dependency on this jar.</description>
+
+  <dependencies>
+    <dependency>
+      <groupId>jakarta.servlet.jsp.jstl</groupId>
+      <artifactId>jakarta.servlet.jsp.jstl-api</artifactId>
+      <version>3.0.0</version>
+    </dependency>
+  </dependencies>
+
+</project>

@@ -4,7 +4,7 @@
      xml:space="preserve">
     <g>
         <circle th:each="i : ${#numbers.sequence(0, circles)}"
-                th:attr="cx=${size / 4},cy=${size},r=${(i / circles) * size / 4},fill=${color},fill-opacity='1',transform=${'rotate(' + (i * (360 / circles)) + ' ' + size + ' ' + size + ')'}" />
+                th:attr="cx=${size / 4},cy=${size},r=${(i / circles.doubleValue()) * size / 4},fill=${color},fill-opacity='1',transform=${'rotate(' + (i * (360 / circles.doubleValue())) + ' ' + size + ' ' + size + ')'}" />
         <animateTransform
             attributeName="transform"
             type="rotate"
