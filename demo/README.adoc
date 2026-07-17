@@ -1,22 +1,47 @@
-= demo
+= demos
+:toc:
+:port1: 8081
+:port2: 8080
+
+== servlet container
+
+
+Either
+[source,bash]
+----
+cd servletcontainer
+mvn -q tomcat:run
+----
+
+or
+[source,bash]
+----
+cd servletcontainer
+mvn -q jetty:run
+----
+
+Then, e.g.:
+
+
+link:http://localhost:{port1}/meeuw/circle?size=32&color=%23f00[circle]
+link:http://localhost:{port1}/meeuw/polygon?size=20&sides=5&color=%2300f[polygon]
+link:http://localhost:{port1}/meeuw/spinner[spinner]
+
+
+== spring boot
 
 A minimal Spring Boot app for manually exercising `svg-objects-spring-boot`. Not part of the
 `svg-objects` reactor and not published anywhere -- build and run it directly:
 
 [source,bash]
 ----
-cd demo
+cd springboot
 mvn -q spring-boot:run
 ----
 
 Then, e.g.:
 
-[source,bash]
-----
-curl "http://localhost:8080/meeuw/circle?size=32&color=%23f00"
-curl "http://localhost:8080/meeuw/polygon?size=20&sides=5&color=%2300f"
-curl "http://localhost:8080/meeuw/spinner"
-----
+link:http://localhost:{port2}/meeuw/circle?size=32&color=%23f00[circle]
+link:http://localhost:{port2}/meeuw/polygon?size=20&sides=5&color=%2300f[polygon]
+link:http://localhost:{port2}/meeuw/spinner[spinner]
 
-Requires `svg-objects-spring-boot` to already be installed in your local `~/.m2` repository
-(run `mvn install` from the repo root first).

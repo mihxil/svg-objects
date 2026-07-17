@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>org.meeuw</groupId>
+  <artifactId>svg-objects-demo-jetty</artifactId>
+  <version>0.1-SNAPSHOT</version>
+  <packaging>war</packaging>
+  <name>svg-objects-demo-jetty</name>
+  <description>Minimalist Jetty web application demonstrating svg-objects. Not part of the svg-objects reactor and never published.</description>
+
+  <properties>
+    <maven.compiler.release>17</maven.compiler.release>
+    <http.port>8081</http.port>
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.meeuw</groupId>
+      <artifactId>svg-objects</artifactId>
+      <version>0.5-SNAPSHOT</version>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <defaultGoal>tomcat:run</defaultGoal>
+    <plugins>
+      <plugin>
+        <groupId>org.eclipse.jetty.ee11</groupId>
+        <artifactId>jetty-ee11-maven-plugin</artifactId>
+        <version>12.1.11</version>
+        <configuration>
+          <jettyProperties>
+            <jetty.http.port>${http.port}</jetty.http.port>
+          </jettyProperties>
+        </configuration>
+      </plugin>
+
+      <plugin>
+        <groupId>io.github.rajendarreddyj</groupId>
+        <artifactId>tomcat-maven-plugin</artifactId>
+        <version>1.0.0</version>
+        <configuration>
+          <tomcatVersion>11.0.24</tomcatVersion>
+          <httpPort>${http.port}</httpPort>
+          <contextPath>/</contextPath>
+          <tomcatCacheDir>tomcatcache</tomcatCacheDir>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+
+</project>

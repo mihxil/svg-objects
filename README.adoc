@@ -30,18 +30,6 @@ Take a dependency like so:
 The name of the web-fragment is 'svgobjects', which you may want to include in `web.xml/absolute-ordering` if your web.xml is metadata-complete.
 
 
-If you use the spinner it currently requires JSTL too
-[source, xml]
-----
-<dependency>
-  <groupId>org.glassfish.web</groupId>
-  <artifactId>jakarta.servlet.jsp.jstl</artifactId>
-  <version>3.0.1</version>
-</dependency>
-----
-The dependency is not transitive, you may not need it at all (if not using spinner), or you may want javax version (javax.servlet.jsp.jstl) if you are on an older servlet container.
-
-
 == spring boot
 
 [source,xml,subs="attributes+"]

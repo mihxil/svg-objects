@@ -9,7 +9,7 @@
   <jsp:scriptlet>
       response.setHeader("Cache-Control", "max-age=3600");
   </jsp:scriptlet>
-  <c:set var="size" value="${empty param.size ? 64 : param.size}" />
+  <c:set var="size" value="${param.size == null ? 64 : param.size}" />
   <!-- the square size of the spinner -->
 
   <c:set var="color" value="${empty param.color ? '#000' : param.color}" />
@@ -24,17 +24,30 @@
   <c:set var="dur" value="${empty param.dur ? '1500ms' : param.dur}" />
   <!-- The duration of one cycle of the animation -->
 
+  <c:set var="background" value="${empty param.background ? '' : param.background}" />
+  <!-- Optional background color -->
+
+  <c:set var="direction" value="${'anticlockwise' eq param.direction ? -1 : 1}" />
+
+
   <svg xmlns="http://www.w3.org/2000/svg"
-       width="${size}px" height="${size}px"
-       viewBox="0 0 ${size * 2} ${size *2}"
-       xml:space="preserve">
+       width="${size}" height="${size}"
+       viewBox="-1 -1 2 2" version="1.1"
+    >
+    <c:if test="${not empty background}">
+      <rect x="-1" y="-1" width="2" height="2" fill="${background}" />
+    </c:if>
     <g>
       <c:forEach begin="0" end="${circles}" var="i">
-        <circle cx="${size / 4}" cy="${size}" r="${(i / circles) * size / 4}" fill="${color}" fill-opacity="1" transform="rotate(${i * (360 / circles)} ${size} ${size})"/>
+          <circle cx="0.75" cy="0"
+                  r="${(i / circles) / 4}"
+                  fill="${color}"
+                  fill-opacity="1"
+                  transform="rotate(${direction * i * (360 / circles)} 0 0)"/>
       </c:forEach>
       <c:set var="transforms">
         <c:forEach begin="0" end="${steps - 1}" var="i">
-          <jsp:text>${i  * 360 / steps} ${size} ${size};</jsp:text>
+          <jsp:text>${direction * i  * 360 / steps} 0 0;</jsp:text>
         </c:forEach>
       </c:set>
       <animateTransform

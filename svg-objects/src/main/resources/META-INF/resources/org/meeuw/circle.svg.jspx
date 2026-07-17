@@ -8,11 +8,14 @@
   <jsp:scriptlet>
       response.setHeader("Cache-Control", "max-age=3600");
   </jsp:scriptlet>
-  <c:set var="size" value="${empty param.size ? 16 : param.size}" />
+  <c:set var="size" value="${param.size == null ? 16 : param.size}" />
 
   <c:set var="color" value="${empty param.color ? '#000' : param.color}" />
 
-  <svg viewBox="0 0 ${size} ${size}" version="1.1"  xmlns="http://www.w3.org/2000/svg">
-    <circle cx="${size / 2}" cy="${size / 2}" r="${size / 2}" fill="${color}" />
+  <svg viewBox="0 0 1 1"
+       width="${size}"
+       height="${size}"
+       version="1.1"  xmlns="http://www.w3.org/2000/svg">
+    <circle cx="0.5" cy="0.5" r="0.5" fill="${color}" />
   </svg>
 </jsp:root>
