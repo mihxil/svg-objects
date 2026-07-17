@@ -4,11 +4,12 @@
   <parent>
     <groupId>org.meeuw</groupId>
     <artifactId>svg-objects-parent</artifactId>
-    <version>0.6-SNAPSHOT</version>
+    <version>0.5-SNAPSHOT</version>
     <relativePath>../pom.xml</relativePath>
   </parent>
   <packaging>jar</packaging>
   <artifactId>svg-objects-spring-boot</artifactId>
+  <name>svg-objects-spring-boot</name>
   <description>Provides the same simple parameterized SVG images as svg-objects, implemented as JSP servlets with Spring Boot auto-configuration, for use in Spring Boot applications.</description>
 
   <properties>
