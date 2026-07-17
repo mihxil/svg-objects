@@ -4,8 +4,8 @@
   version="2.0"
   xmlns:c="jakarta.tags.core" >
   <jsp:output omit-xml-declaration="false" />
+  <jsp:directive.page contentType="image/svg+xml"  session="false"/>
 
-  <jsp:directive.page contentType="image/svg+xml" />
   <jsp:scriptlet>
       response.setHeader("Cache-Control", "max-age=3600");
   </jsp:scriptlet>

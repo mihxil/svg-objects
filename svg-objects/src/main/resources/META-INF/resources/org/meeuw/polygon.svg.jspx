@@ -5,7 +5,7 @@
   xmlns:c="jakarta.tags.core" >
   <jsp:directive.page import="static java.lang.Math.*"/>
   <jsp:output omit-xml-declaration="false" />
-  <jsp:directive.page contentType="image/svg+xml" />
+  <jsp:directive.page contentType="image/svg+xml"  session="false"/>
   <jsp:scriptlet>
       response.setHeader("Cache-Control", "max-age=3600");
   </jsp:scriptlet>
