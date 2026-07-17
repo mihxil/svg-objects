@@ -1,6 +1,6 @@
 = svg-objects
 :toc:
-:version: 0.4-SNAPSHOT
+:version: 0.4
 
 
 image:https://img.shields.io/maven-central/v/org.meeuw/svg-objects.svg?label=Maven%20Central[Maven Central,link=https://search.maven.org/search?q=g:%22org.meeuw%22%20AND%20a:%22svg-objects%22]
@@ -56,7 +56,7 @@ The dependency is not transitive, you may not need it at all (if not using spinn
 See link:demo/README.adoc[demo] for a runnable example.
 
 
-== /meeuw/spinner
+== `/meeuw/spinner`
 
 A parameterized SVG spinner
 
@@ -114,7 +114,7 @@ Use: `${pageContext.request.contextPath}/meeuw/polygon?&lt;params&gt;`
 
 
 
-== /meeuw/circle
+== `/meeuw/circle`
 
 Use: `${pageContext.request.contextPath}/meeuw/circle?&lt;params&gt;`
 
