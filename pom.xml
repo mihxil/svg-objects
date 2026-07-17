@@ -4,7 +4,7 @@
 
   <groupId>org.meeuw</groupId>
   <artifactId>svg-objects-parent</artifactId>
-  <version>0.5-SNAPSHOT</version>
+  <version>0.6-SNAPSHOT</version>
   <packaging>pom</packaging>
   <name>svg-objects-parent</name>
   <description>Parent POM for the svg-objects modules, which provide simple parameterized SVG images.</description>
