@@ -4,7 +4,7 @@
 
   <groupId>org.meeuw</groupId>
   <artifactId>svg-objects-parent</artifactId>
-  <version>0.5-SNAPSHOT</version>
+  <version>0.5</version>
   <packaging>pom</packaging>
   <name>svg-objects-parent</name>
   <description>Parent POM for the svg-objects modules, which provide simple parameterized SVG images.</description>
@@ -44,7 +44,7 @@
     <connection>scm:git:${project.scm.url}</connection>
     <developerConnection>scm:git:${project.scm.url}</developerConnection>
     <url>https://github.com/mihxil/svg-objects</url>
-    <tag>HEAD</tag>
+    <tag>REL-0.5</tag>
   </scm>
 
   <dependencyManagement>
