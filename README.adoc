@@ -1,6 +1,6 @@
 = svg-objects
 :toc:
-:version: 0.4
+:version: 0.5
 
 
 image:https://img.shields.io/maven-central/v/org.meeuw/svg-objects.svg?label=Maven%20Central[Maven Central,link=https://search.maven.org/search?q=g:%22org.meeuw%22%20AND%20a:%22svg-objects%22]
@@ -12,8 +12,9 @@ This can be used in a simple servlet environment or spring boot.
 
 Each response is served with `Content-Type: image/svg+xml` and `Cache-Control: max-age=3600`.
 
+== Installation
 
-== Servlets with jspx
+=== In a classical servlet container
 
 Take a dependency like so:
 
@@ -30,8 +31,7 @@ The name of the web-fragment is 'svgobjects', which you may want to include in `
 
 A working example can be found in link:demo/README.adoc#servletcontainer[demo].
 
-
-== spring boot
+=== spring boot
 
 The svg's are implemented with jspx and registered via a web-fragment. In spring-boot that doesn't work out of the box.The dependency `svg-objects-spring-boot` provides the `@Configuration` and dependencies to get it up.
 
@@ -46,8 +46,9 @@ The svg's are implemented with jspx and registered via a web-fragment. In spring
 
 See link:demo/README.adoc#springboot[demo] for a runnable example.
 
+== Available SVG's
 
-== `/meeuw/spinner`
+=== `/meeuw/spinner`
 
 A parameterized SVG spinner
 
@@ -84,7 +85,7 @@ And the default then renders like so:
 image:spinner.svg[]
 
 
-== `/meeuw/polygon`
+=== `/meeuw/polygon`
 
 Use: `${pageContext.request.contextPath}/meeuw/polygon?&lt;params&gt;`
 
@@ -105,7 +106,7 @@ Use: `${pageContext.request.contextPath}/meeuw/polygon?&lt;params&gt;`
 
 
 
-== `/meeuw/circle`
+=== `/meeuw/circle`
 
 Use: `${pageContext.request.contextPath}/meeuw/circle?&lt;params&gt;`
 
