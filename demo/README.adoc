@@ -3,6 +3,8 @@
 :port1: 8081
 :port2: 8080
 
+
+[#servletcontainer]
 == servlet container
 
 
@@ -28,6 +30,7 @@ link:http://localhost:{port1}/meeuw/polygon?size=20&sides=5&color=%2300f[polygon
 link:http://localhost:{port1}/meeuw/spinner[spinner]
 
 
+[#springboot]
 == spring boot
 
 A minimal Spring Boot app for manually exercising `svg-objects-spring-boot`. Not part of the
